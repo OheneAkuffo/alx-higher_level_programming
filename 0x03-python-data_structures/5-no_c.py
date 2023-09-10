@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-def new_in_list(my_list, idx, element):
-    new_list = my_list[::]
-
-    if idx < 0 or idx > len(my_list) - 1:
-        return (my_list)
-    new_list[idx] = element
-    return (new_list)
+def no_c(my_string):
+    new_str = []
+    for s in my_string:
+        if s != 'c' and s != 'C':
+            new_str.append(s)
+    return ("".join(new_str))
