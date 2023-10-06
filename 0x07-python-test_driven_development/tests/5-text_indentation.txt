@@ -1,0 +1,45 @@
+The ``5-text_indentation`` doctest
+
+Test cases:
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+	>>> text_indentation("Hello? World.")
+	Hello?
+	<BLANKLINE>
+	World.
+	<BLANKLINE>
+	>>> text_indentation("Hello")
+	Hello
+	>>> text_indentation(". , : ?")
+	.
+	<BLANKLINE>
+	, :
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	>>> text_indentation("")
+	>>> text_indentation("What are you doing. Please can I ask you a question?")
+	What are you doing.
+	<BLANKLINE>
+	Please can I ask you a question?
+	<BLANKLINE>
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+	>>> text_indentation(1234)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+	>>> text_indentation("Hello. How are you?\n")
+	Hello.
+	<BLANKLINE>
+	How are you?
+	<BLANKLINE>
+	<BLANKLINE>
+	>>> text_indentation("\n Hello babe, how are you doing ")
+	<BLANKLINE>
+	 Hello babe, how are you doing 
+	>>> text_indentation("", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() takes 1 positional argument but 2 were given

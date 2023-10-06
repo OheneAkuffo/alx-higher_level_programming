@@ -1,0 +1,33 @@
+The ``3-say_my_name`` doctest
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test Cases:
+	>>> say_my_name("Fredrick", "Marcusin")
+	My name is Fredrick Marcusin
+	>>> say_my_name(13, "Marcusin")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+	>>> say_my_name("Fredrick", 20)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+	>>> say_my_name("", "Marcusin")
+	My name is  Marcusin
+	>>> say_my_name("Fredrick")
+	My name is Fredrick 
+	>>> say_my_name("", "")
+	Traceback (most recent call last):
+	...
+        TypeError: first_name must be a string
+	>>> say_my_name("mark", ["selorm"])
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+	>>> say_my_name(None, "Marcusin")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+	>>> say_my_name("Fredrick", "Marcusin", "Selorm")
+	Traceback (most recent call last):
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
